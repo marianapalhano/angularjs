@@ -5,8 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Name Calculator</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
 </head>
-<body>
-    
+<body ng-app="NameCalculator">
+    <div ng-controller="NameCalculatorController">
+        <h1>Name Calculator</h1>
+        <div>
+            Your name: <input type="text" ng-model="name" ng-keyup="displayNumeric();">
+        </div>
+        <div>Numeric value of person's name is: {{ totalValue }}</div>
+    </div>
 </body>
 </html>
