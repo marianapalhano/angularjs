@@ -10,9 +10,9 @@
 </head>
 <body>
     <div ng-controller="MsgController">
-        
-        <!-- <input type="text" ng-model="name" ng-blur="upper()"> -->
         <p>Message is {{ sayMessage() }}</p>
+        <button ng-click="feedPuppy()">Feed Puppy</button>
+        <img src="./puppy-{{state}}.png" />
     </div>
 </body>
 </html>
