@@ -12,6 +12,7 @@
     <div ng-controller="MsgController">
         <p>Message is {{ sayMessage() }}</p>
         <p>Cost: {{ 4.29 | currency }}</p>
+        <p>Truth is {{ sayMessage() | truth: 'cookies' : 'bones' }}</p>
     </div>
 </body>
 </html>
