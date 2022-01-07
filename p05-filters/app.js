@@ -1,33 +1,14 @@
 (function() {
     'use strict';
-    angular.module('MsgApp', [])
-        .controller('MsgController', MsgController)
-        .filter('loves', LovesFilter)
-        .filter('truth', TruthFilter);
+    angular.module('CounterApp', [])
+        .controller('CounterController', CounterController);
         
-        MsgController.$inject = ['$scope', 'lovesFilter'];       
+        CounterController.$inject = ['$scope'];       
 
-        function MsgController ($scope, lovesFilter) {
-            $scope.name = "Mariana";
-            
-            $scope.sayMessage = function() {
-                return lovesFilter("Luke likes cookies");
-            }
-        }
-
-        function LovesFilter() {
-            return function(input) {
-                input = input || "";
-                input = input.replace("likes", "loves");
-                return input;
-            }
-        }
-
-        function TruthFilter() {
-            return function(input, target, replace) {
-                input = input || "";
-                input = input.replace(target, replace);
-                return input;
+        function CounterController ($scope) {
+                        
+            $scope.showNumberOfWatchers = function() {
+                console.log($scope);
             }
         }
 })();
